@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="program.js"></script>
+    <title>Vendin Machine</title>
+  </head>
+  <body>
+    <div class="menu">
+      <div class="cajon">
+        <h2>Selección:</h2>
+        <input id="seleccion" type="text" />
+      </div>
+      <button onclick="handleConsultar()" class="btnEnviar">Consultar</button>
+    </div>
+    <div class="menu">
+      <div class="cajon">
+        <h2>Dinero:</h2>
+        <input id="dinero" type="text" />
+      </div>
+      <button onclick="handleEnviar()" class="btnEnviar">Dar producto</button>
+    </div>
+    <img src="vending.jpg" height="400px" alt="vending Machine" />
+    <span>Respuesta:</span>
+    <div class="botones"></div>
+    <div class="menu">
+      <div>
+        <div class="box"></div>
+        <h3>Producto</h3>
+      </div>
+      <div>
+        <div class="box"></div>
+        <h3>Cambio</h3>
+      </div>
+    </div>
+    <div class="log">Log:</div>
+  </body>
+</html>
