@@ -4,38 +4,86 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <script src="program.js"></script>
     <title>Vendin Machine</title>
   </head>
   <body>
-    <div class="menu">
-      <div class="cajon">
-        <h2>Selección:</h2>
-        <input id="seleccion" type="text" />
+    <div class="container-lg">
+      <div class="col-lg-9">
+        <div class="row align-items-center justify-content-between mt-2 mb-2">
+          <div class="col-4">
+            <h2>Selección:</h2>
+          </div>
+          <div class="col-4">
+            <input id="seleccion" class="form-control" type="text" />
+          </div>
+          <div class="col">
+            <div class="d-grid gap-2">
+              <button type="button" onclick="handleConsultar()" class="btn btn-lg btn-secondary">
+                Consultar
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-center justify-content-between">
+          <div class="col-4">
+            <h2>Dinero:</h2>
+          </div>
+          <div class="col-4">
+            <input id="dinero" class="form-control" type="text" />
+          </div>
+          <div class="col">
+            <div class="d-grid gap-2">
+              <button type="button" onclick="handleEnviar()" class="btn btn-lg btn-primary">
+                Dar producto
+              </button>
+            </div>
+          </div>
+        </div>
+        <img
+          src="vending.jpg"
+          class="img-fluid rounded mx-auto d-block"
+          height="400px"
+          alt="vending Machine"
+        />
+        <h1>Respuesta:</h1>
+        <div class="botones"></div>
+        <div class="menu">
+          <div>
+            <div class="box"></div>
+            <h3>Producto</h3>
+          </div>
+          <div>
+            <div class="box"></div>
+            <h3>Cambio</h3>
+          </div>
+        </div>
       </div>
-      <button onclick="handleConsultar()" class="btnEnviar">Consultar</button>
+      <div class="col-lg-3">
+        <div class="log">
+          <h1>Log:</h1>
+          <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+          <p><del>This line of text is meant to be treated as deleted text.</del></p>
+          <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+          <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+          <p><u>This line of text will render as underlined.</u></p>
+          <p><small>This line of text is meant to be treated as fine print.</small></p>
+          <p><strong>This line rendered as bold text.</strong></p>
+          <p><em>This line rendered as italicized text.</em></p>
+        </div>
+      </div>
     </div>
-    <div class="menu">
-      <div class="cajon">
-        <h2>Dinero:</h2>
-        <input id="dinero" type="text" />
-      </div>
-      <button onclick="handleEnviar()" class="btnEnviar">Dar producto</button>
-    </div>
-    <img src="vending.jpg" height="400px" alt="vending Machine" />
-    <span>Respuesta:</span>
-    <div class="botones"></div>
-    <div class="menu">
-      <div>
-        <div class="box"></div>
-        <h3>Producto</h3>
-      </div>
-      <div>
-        <div class="box"></div>
-        <h3>Cambio</h3>
-      </div>
-    </div>
-    <div class="log">Log:</div>
   </body>
 </html>
