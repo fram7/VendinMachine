@@ -32,7 +32,7 @@
         <div class="col-md-8">
           <div class="row align-items-center justify-content-between mt-2 mb-2">
             <div class="col-4">
-              <h2>Selección:</h2>
+              <h2 id="h2Selecccion">Selección:</h2>
             </div>
             <div class="col-4">
               <input id="seleccion" class="form-control" type="text" />
@@ -47,7 +47,7 @@
           </div>
           <div class="row align-items-center justify-content-between">
             <div class="col-4">
-              <h2>Dinero:</h2>
+              <h2>Dinero (1-50):</h2>
             </div>
             <div class="col-4">
               <input id="dinero" class="form-control" type="text" />
@@ -61,22 +61,38 @@
             </div>
           </div>
           <img
-            src="vending.jpg"
+            src="./images/vending.jpg"
             class="img-fluid rounded mx-auto d-block"
             height="400px"
             alt="vending Machine"
           />
           <h3 id="respuesta"></h3>
           <div class="botones"></div>
-          <div class="menu">
-            <div>
-              <div class="box"></div>
-              <h3>Producto</h3>
+          <div class="container">
+            <div class="row justify-content-between align-items-start">
+              <div id="producto" style="display: none" class="col">
+                <div class="card" style="width: 10rem">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Producto</h5>
+                    <img id="imgProducto" class="mt-1 card-img-top" alt="..." />
+                    <p id="pProducto" class="card-text text-center"></p>
+                  </div>
+                </div>
+              </div>
+              <div id="cambio" style="display: none" class="col">
+                <div class="card" style="width: 10rem">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Cambio</h5>
+                    <img src="./images/money.png" class="mt-1 card-img-top" alt="..." />
+                    <p id="pCambio" class="card-text text-center"></p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div>
+            <!-- <div>
               <div class="box"></div>
               <h3>Cambio</h3>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="col-md-4">

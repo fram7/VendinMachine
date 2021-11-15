@@ -7,12 +7,21 @@ import {
   validarInventario,
   actualizarInventario,
   buscarProducto,
-} from "./tarea.js";
+  PRODUCTOS,
+} from "./resulta.js";
+// } from "./tarea.js";
+
+document.getElementById("h2Selecccion").innerHTML = `Selección (0-${PRODUCTOS.length - 1}):`;
 
 //NO TOCAR
 function limpiarlog() {
   const element = document.getElementById("myDiv");
   element.innerHTML = "";
+
+  document.getElementById("respuesta").innerHTML = "";
+
+  document.getElementById("cambio").style.display = "none";
+  document.getElementById("producto").style.display = "none";
 }
 //NO TOCAR
 function imprimirMensaje(texto) {
@@ -23,7 +32,7 @@ function imprimirMensaje(texto) {
 //NO  TOCAR
 function pintarRespuesta(texto) {
   const element = document.getElementById("respuesta");
-  element.innerHTML = `Respuesta: ${texto}`;
+  element.innerHTML = `${texto}`;
 }
 
 //NO TOCAR
@@ -117,7 +126,14 @@ export function handleEnviar() {
         imprimirMensaje(`Consultamos el producto`);
         const producto = buscarProducto(seleccion);
         imprimirMensaje(`Producto: ${producto}`);
+
         //pintar producto
+        document.getElementById("cambio").style.display = "block";
+        document.getElementById("pCambio").innerText = devueltas;
+
+        document.getElementById("producto").style.display = "block";
+        document.getElementById("pProducto").innerText = producto;
+        document.getElementById("imgProducto").src = `./images/${producto}.png`;
       }
     }
   }
